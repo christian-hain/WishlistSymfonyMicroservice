@@ -1,0 +1,25 @@
+fos_rest:
+    param_fetcher_listener: force
+    body_listener:
+        array_normalizer:
+            service: fos_rest.normalizer.camel_keys
+            forms: true
+        decoders:
+            json: fos_rest.decoder.json
+            xml: fos_rest.decoder.xml
+    body_converter:
+        enabled: true
+    format_listener: true
+    view:
+        view_response_listener: 'force'
+        formats:
+            xml: true
+            json : true
+        templating_formats:
+            html: false
+        force_redirects:
+            html: true
+        failed_validation: HTTP_BAD_REQUEST
+        default_engine: twig
+    routing_loader:
+        default_format: json

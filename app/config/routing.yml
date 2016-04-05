@@ -1,0 +1,4 @@
+soeren_martius_wishlist:
+    resource: "@SoerenMartiusWishlistBundle/Resources/config/routing.yml"
+    prefix:   /
+    type: rest
