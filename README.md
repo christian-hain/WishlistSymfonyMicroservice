@@ -13,6 +13,15 @@ Requirements
 - [MYSQL Community Server 5.6](https://dev.mysql.com/downloads/mysql/5.6.html) or [MongoDB 3.2](https://www.mongodb.org/)
 
 
+Spawn a new instance of the microservice as a docker container ( the quick way )
+-------------------------------------------------------------------------------
+
+1. [Install docker](https://docs.docker.com/engine/installation/)
+2. Launch a container ```
+                        docker run soerenmartius/wishlist -p 8080:80
+                      ```
+3. the services is now available at [http://yourdockerhostmachineiphere:8080/wishlist](http://yourdockerhostmachineiphere:8080/wishlist)
+
 Manual installation
 -------------------
 
