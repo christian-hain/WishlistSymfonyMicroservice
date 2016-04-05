@@ -1,0 +1,18 @@
+www:
+  image: jakubsacha/symfony-docker:php7-dev
+  volumes:
+    - ".:/var/www/html"
+  ports:
+    - "8081:80"
+  links:
+     - db
+
+db:
+  image: mysql:5.7
+  ports:
+    - 3306:3306
+  environment:
+    MYSQL_ROOT_PASSWORD: 'root'
+    MYSQL_DATABASE: 'wishlist'
+    MYSQL_USER: 'root'
+    MYSQL_PASSWORD: ''
