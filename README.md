@@ -3,12 +3,16 @@ Symfony 3 Wishlist Microservice
 
 Wishlist microservice based on symfony and the [wishlist php component](https://github.com/soerenmartius/Wishlist)
 
-Run it with docker
-------------------
+Launch a new instance of the microservice with docker 
+-----------------------------------------------------
+
+Requirements
+------------
 
 
-Install it manually
--------------------
+
+Manual install
+--------------
 
 1. clone the repository ```
                         git clone git@github.com:soerenmartius/WishlistSymfonyMicroservice.git
