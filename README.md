@@ -3,14 +3,16 @@ Symfony 3 Wishlist Microservice
 
 Wishlist microservice based on symfony and the [wishlist php component](https://github.com/soerenmartius/Wishlist)
 
-Launch a new instance of the microservice with docker 
------------------------------------------------------
-
 Requirements
 ------------
 
 - [PHP 7](http://php-osx.liip.ch/)
 - [MYSQL Community Server 5.7](https://dev.mysql.com/downloads/mysql/5.6.html) or [MongoDB 3.2](https://www.mongodb.org/)
+
+
+Launch a new instance of the microservice with docker 
+-----------------------------------------------------
+g
 
 
 Spawn a new instance of the microservice using docker-compose ( the cool way )
@@ -23,19 +25,23 @@ Spawn a new instance of the microservice using docker-compose ( the cool way )
     ```
     git clone git@github.com:soerenmartius/WishlistSymfonyMicroservice.git && cd WishlistSymfonyMicroservice && git checkout docker-compose
     ```
-    
-4. Start the machines
+4. Install the dependencies
+    ```
+    composer install
+    ```
+
+5. Start the machines
     ```
     docker-compose up
     ```
    docker-compose will now launch two containers for you. One webserver and one database. The containers are linked together to the webserver has access to the database.
    
-5. Setup db
+6. Setup db
     ```
     php bin/console doctrine:database:create --if-not-exists && php bin/console doctrine:schema:update --force 
     ```
             
-6. The service will be now available at [http://192.168.99.100:8081/wishlist](http://192.168.99.100:8081/wishlist) ( the ip might be different depending on your docker config )
+7. The service will be now available at [http://192.168.99.100:8081/wishlist](http://192.168.99.100:8081/wishlist) ( the ip might be different depending on your docker config )
 
 
 
